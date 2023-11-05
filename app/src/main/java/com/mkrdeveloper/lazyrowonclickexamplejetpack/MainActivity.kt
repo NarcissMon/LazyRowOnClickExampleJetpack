@@ -47,13 +47,13 @@ class MainActivity : ComponentActivity() {
 
                     val names = List(600) {
                         when (it % 6){
-                            0 -> "Peperoni"
-                            1 -> "Vegan"
-                            2 -> "FourCheese"
-                            3 -> "Margaritta"
-                            4 -> "American"
-                            5 -> "Mexican"
-                            else -> "Peperoni"
+                            0 -> "PRO Go. Основы программирования"
+                            1 -> "Основы PHP: Структура и Синтаксис"
+                            2 -> "Тестировщик мобильных приложений: Android и iOS"
+                            3 -> "Пакет SQL курсов"
+                            4 -> "Профессия Python-разработчик"
+                            5 -> "Продвинутый Django 4"
+                            else -> "PRO Go. Основы программирования"
                         }
                     } /*(
                         "Peperoni",
@@ -66,13 +66,13 @@ class MainActivity : ComponentActivity() {
 
                     val ingredients = List(600) {
                         when (it % 6) {
-                            0 -> "Tomato sos, cheese, oregano, peperoni"
-                            1 -> "Tomato sos, cheese, oregano, spinach, green paprika, rukola"
-                            2 -> "Tomato sos, oregano, mozzarella, gouda, parmesan, cheddar"
-                            3 -> "Tomato sos, cheese, oregano, basil"
-                            4 -> "Tomato sos, cheese, oregano, green paprika, red beans"
-                            5 -> "Tomato sos, cheese, oregano, corn, jalapeno, chicken"
-                            else -> "Tomato sos, cheese, oregano, peperoni" // Здесь также можно добавить обработку
+                            0 -> "Начальный уровень"
+                            1 -> "Начальный уровень"
+                            2 -> "Средний уровень"
+                            3 -> "Программа"
+                            4 -> "Программа"
+                            5 -> "Средний уровень"
+                            else -> "Начальный уровень" // Здесь также можно добавить обработку
                         }
                     }
                         /*(
