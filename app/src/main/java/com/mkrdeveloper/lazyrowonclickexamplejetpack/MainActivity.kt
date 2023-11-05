@@ -26,7 +26,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    val imageId = List(600) {
+                    val imageId = List(1000) {
                         when (it % 6) {
                             0 -> R.drawable.p1
                             1 -> R.drawable.p2
