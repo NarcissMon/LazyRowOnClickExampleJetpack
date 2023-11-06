@@ -36,14 +36,7 @@ class MainActivity : ComponentActivity() {
                             5 -> R.drawable.p6
                             else -> R.drawable.p1
                         }
-                    }/*(
-                        R.drawable.p1,
-                        R.drawable.p2,
-                        R.drawable.p3,
-                        R.drawable.p4,
-                        R.drawable.p5,
-                        R.drawable.p6
-                    )*/
+                    }
 
                     val names = List(600) {
                         when (it % 6){
@@ -55,14 +48,7 @@ class MainActivity : ComponentActivity() {
                             5 -> "Продвинутый Django 4"
                             else -> "PRO Go. Основы программирования"
                         }
-                    } /*(
-                        "Peperoni",
-                        "Vegan",
-                        "FourCheese",
-                        "Margaritta",
-                        "American",
-                        "Mexican"
-                    )*/
+                    }
 
                     val ingredients = List(600) {
                         when (it % 6) {
@@ -75,14 +61,6 @@ class MainActivity : ComponentActivity() {
                             else -> "Начальный уровень" // Здесь также можно добавить обработку
                         }
                     }
-                        /*(
-                        "Tomato sos, cheese, oregano, peperoni",
-                        "Tomato sos, cheese, oregano, spinach, green paprika, rukola",
-                        "Tomato sos, oregano, mozzarella, goda, parmesan, cheddar",
-                        "Tomato sos, cheese, oregano, bazillion",
-                        "Tomato sos, cheese, oregano, green paprika, red beans",
-                        "Tomato sos, cheese, oregano, corn, jalapeno, chicken",
-                    )*/
 
                     val navController = rememberNavController()
                     NavHost(navController = navController, startDestination = "MainScreen") {
