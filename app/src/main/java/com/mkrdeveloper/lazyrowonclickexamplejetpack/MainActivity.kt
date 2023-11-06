@@ -5,16 +5,13 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.lazy.LazyListState
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.LaunchedEffect
-import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.snapshotFlow
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
@@ -24,21 +21,33 @@ import androidx.navigation.navArgument
 import com.mkrdeveloper.lazyrowonclickexamplejetpack.screens.DetailScreen
 import com.mkrdeveloper.lazyrowonclickexamplejetpack.screens.MainScreen
 import com.mkrdeveloper.lazyrowonclickexamplejetpack.ui.theme.LazyRowOnClickExampleJetpackTheme
-import kotlin.math.min
 
 
 class MainActivity : ComponentActivity() {
     private val pageSize = 20 // Количество элементов для подгрузки
 
+    private val imageResources = listOf(
+        R.drawable.p1,
+        R.drawable.p2,
+        R.drawable.p3,
+        R.drawable.p4,
+        R.drawable.p5,
+        R.drawable.p6
+    )
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        val initialImageList = List(1000) { R.drawable.p1 }
+        fun getRandomImageResource(): Int {
+            return imageResources.random()
+        }
+        val initialImageList = List(1000) { getRandomImageResource() }
         val initialNamesList = List(1000) { "Курс $it" }
         val initialIngredientsList = List(1000) { "Описание курса для элемента $it" }
 
+
+
         fun getNextPageImages(currentSize: Int): List<Int> {
-            val nextPageImages = List(pageSize) { R.drawable.p1 }
+            val nextPageImages = List(pageSize) { getRandomImageResource() }
             return nextPageImages
         }
 
